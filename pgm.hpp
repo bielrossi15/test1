@@ -9,17 +9,18 @@ class Image {
     private:
         int width, height, maxValue, desloc;
         
-        string magicNum, comment;
+        string magicNum, comment, path;
     
         char *pixels;
-        char *path;
     
+    
+
     public: 
         //static Image* from_file(const string& path);
         Image();
         ~Image();
-        void read(char* path);
-        void write(char* path);
+        void read(string path);
+        void write();
         float negative();
         int getHeight();
         int getWidth();
@@ -27,7 +28,7 @@ class Image {
         int getDesloc();
         string getMagicNum();
         string getComment();
-        char * getPath();
+        string getPath();
         char * getPixels();
         void setHeight(int height);
         void setWidth(int width);
@@ -35,7 +36,7 @@ class Image {
         void setDesloc(int desloc);
         void setMagicNum(string magicNum);
         void setComment(string comment);
-        void setPath(char * path);
+        void setPath(string path);
         void setPixels(char * pixels);
         
 

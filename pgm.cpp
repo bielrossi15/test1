@@ -7,7 +7,7 @@
 using namespace std;
 
 Image::Image(){
-    *path;
+    path = "";
     magicNum = "";
     comment = "";
     width = 0;
@@ -47,7 +47,7 @@ void Image::setComment(string comment){
     this -> comment = comment;
 }
 
-void Image::setPath(char * path){
+void Image::setPath(string path){
     this -> path = path;
 }
 
@@ -79,7 +79,7 @@ string Image::getComment(){
     return comment;
 }
 
-char *Image::getPath(){
+string Image::getPath(){
     return path;
 }
 
@@ -87,7 +87,7 @@ char *Image::getPixels(){
     return pixels;
 }
 
-void Image::read(char* path){
+void Image::read(string path){
     fstream file;
     int width, height, maxValue, desloc;
     string magicNum, comment, change;
@@ -117,12 +117,7 @@ void Image::read(char* path){
 
 }
 
-void Image::write(char* path){
-    ofstream iterator;
-    fstream file;
-
-    file.open(path);
-    
+void Image::write(){
     
 
 }

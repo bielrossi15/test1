@@ -2,19 +2,21 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include "pgm.cpp"
+#include "pgm.hpp"
 
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    Image img;
-    char * path;
+
+    string path;
     cin >> path;
 
-    img.read(path);
-    
+    Image * img = new Image();
+    img->read(img -> getPath());
 
+    
+    delete img;
 
     return 0;
 }
