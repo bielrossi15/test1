@@ -14,7 +14,6 @@ Image::Image(){
     height = 0;
     maxValue = 0;
     desloc = 0;
-    *pixels;
 };
 
 Image::~Image(){
@@ -122,6 +121,6 @@ void Image::write(){
 
 }
 
-float Image::negative(){
-
-}
+/*float Image::negative(){
+    
+}*/
